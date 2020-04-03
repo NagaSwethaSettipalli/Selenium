@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SeleniumLearning
 {
     [TestClass]
-    public class UnitTest1
+    public class TestBase
     {
         [TestMethod]
         public void TestMethod1()
