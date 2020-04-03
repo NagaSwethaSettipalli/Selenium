@@ -20,7 +20,7 @@ namespace SeleniumLearning.Tests
         public void GivenUltimteQAHomePage_WhenClickedOnAutomationExercisesTab_ThenAutomationExercisesPageOpens()
         {
             ultimateQAHomePage.ClickOnAutomationExercisestab();
-            Assert.True(driver.Url.Equals(AutomationExerciseurl));
+            Assert.True(driver.Url.Equals(automationExerciseUrl));
         }
     }
 }

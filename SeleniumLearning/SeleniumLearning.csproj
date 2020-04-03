@@ -68,6 +68,13 @@
   </Choose>
   <ItemGroup>
     <Compile Include="PageModels\AutomationExercisesPageModel.cs" />
+    <Compile Include="PageModels\BigPageWithManyElementsPageModel.cs" />
+    <Compile Include="PageModels\FakeLandingPageModel.cs" />
+    <Compile Include="PageModels\FakePricingPageModel.cs" />
+    <Compile Include="PageModels\FillOutFormsPageModel.cs" />
+    <Compile Include="PageModels\InteractionsWithSimpleElementsPageModel.cs" />
+    <Compile Include="PageModels\LearnHowToAutomatePageModel.cs" />
+    <Compile Include="PageModels\LoginAutomationPageModel.cs" />
     <Compile Include="PageModels\UltimateQAHomePageModel.cs" />
     <Compile Include="Tests\UltimateQAHomePageTests.cs" />
     <Compile Include="Utilities\TestBase.cs" />
