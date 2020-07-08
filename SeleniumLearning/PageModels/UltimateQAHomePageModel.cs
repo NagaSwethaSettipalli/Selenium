@@ -45,13 +45,13 @@ namespace SeleniumLearning
         }
         public IWebElement FacebookIcon
         {
-            get { return driver.FindElement(By.ClassName("sw swp_facebook_icon")); }
+            get { return driver.FindElement(By.CssSelector(".sw.swp_facebook_icon")); }
         }
         public IWebElement TwitterIcon
         {
             get { return driver.FindElement(By.ClassName("sw swp_twitter_icon")); }
         }
-        public IWebElement ShareIcon
+        public IWebElement TumblrIcon
         {
             get { return driver.FindElement(By.ClassName("sw swp_tumblr_icon")); }
         }
@@ -70,6 +70,31 @@ namespace SeleniumLearning
         {
             AutomationExercisestab.Click();
             return new AutomationExercisesPageModel(driver);
+        }
+        public ShareALinkViaEmailPageModel ClickEmailLink()
+        {
+            EmailIcon.Click();
+            return new ShareALinkViaEmailPageModel(driver);
+        }
+        public ShareALinkViaFacebookPageModel ClickFacebookLink()
+        {
+            FacebookIcon.Click();
+            return new ShareALinkViaFacebookPageModel(driver);
+        }
+        public ShareALinkViaLinkedInPageModel ClicklinkedInLink()
+        {
+            LinkedinIcon.Click();
+            return new ShareALinkViaLinkedInPageModel(driver);
+        }
+        public ShareALinkViaTwitterPageModel ClickTwitterLink()
+        {
+            TwitterIcon.Click();
+            return new ShareALinkViaTwitterPageModel(driver);
+        }
+        public ShareALinkViaTumblrPageModel ClickTumblrLink()
+        {
+            TumblrIcon.Click();
+            return new ShareALinkViaTumblrPageModel(driver);
         }
         #endregion methods
     }

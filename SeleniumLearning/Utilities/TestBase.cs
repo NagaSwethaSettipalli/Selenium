@@ -32,13 +32,13 @@ namespace SeleniumLearning
             driver.Manage().Window.Maximize();
             driver.Url = demoUrl;
 
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));               
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));               
         }
 
         public void Dispose()
         {
             if (driver != null)
-                driver.Dispose();
+              driver.Dispose();
         }
 
         //generic methods

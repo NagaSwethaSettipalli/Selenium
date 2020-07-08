@@ -75,15 +75,27 @@
     <Compile Include="PageModels\InteractionsWithSimpleElementsPageModel.cs" />
     <Compile Include="PageModels\LearnHowToAutomatePageModel.cs" />
     <Compile Include="PageModels\LoginAutomationPageModel.cs" />
+    <Compile Include="PageModels\ShareALinkViaLinkedInPageModel.cs" />
+    <Compile Include="PageModels\ShareALinkViaTumblrPageModel.cs" />
+    <Compile Include="PageModels\ShareALinkViaTwitterPageModel.cs" />
+    <Compile Include="PageModels\ShareALinkViaFacebookPageModel.cs" />
+    <Compile Include="PageModels\ShareALinkViaEmailPageModel.cs" />
     <Compile Include="PageModels\UltimateQAHomePageModel.cs" />
     <Compile Include="Tests\UltimateQAHomePageTests.cs" />
     <Compile Include="Utilities\TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="..\packages\WebDriver.ChromeDriver.win32.83.0.4103.39\content\chromedriver.exe">
+      <Link>chromedriver.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
@@ -110,9 +122,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.16.1\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.16.1\build\net35\NUnit3TestAdapter.props'))" />
     <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
-    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.80.0.3987.10600\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.80.0.3987.10600\build\Selenium.WebDriver.ChromeDriver.targets'))" />
   </Target>
-  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.80.0.3987.10600\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.80.0.3987.10600\build\Selenium.WebDriver.ChromeDriver.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
